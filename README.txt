@@ -4,12 +4,12 @@ Sets a global $absolute_path variable and a helper function for Drupal base abso
 
 Usage
 =====
-- using the global $absolute_path;
-- or with a call to absolute_path() function.\
+- using $absolute_path global variable.
+- or calling absolute_path() function.
 
 Why?
 ====
-Fot lazies to cheer!
+Cause there are lazies who want beer!
 
 Author and Maintainer
 =====================
