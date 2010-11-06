@@ -1,0 +1,6 @@
+; $Id$
+name = "Absolute Path"
+description = "Sets a global $absolute_path variable and a helper function for Drupal base absolute path."
+
+core = 6.x
+package = Development

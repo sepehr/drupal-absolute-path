@@ -1,0 +1,33 @@
+<?php
+// $Id$
+
+/**
+ * @file absolute_path.module
+ * Sets a global $absolute_path variable and a helper function for Drupal base absolute path.
+ */
+ 
+/**
+ * Implementation of hook_init().
+ *
+ * Get the document root for the current Drupal installation.
+ * $_SERVER['DOCUMENT_ROOT'] is not reliable across all systems, 
+ * so we need a way to get the correct value.
+ */
+function absolute_path_init() {
+  $absolute_dir = dirname(__FILE__);
+  $relative_dir = drupal_get_path('module', 'absolute_path');
+  $GLOBALS['absolute_path'] = substr($absolute_dir, 0, -1 * (1 + strlen($relative_dir)));
+}
+
+/**
+ * The Helper function.
+ *
+ * @return
+ *   The absolute system path of the Drupal installation.
+ *
+ * @see absolute_path_init()
+ */
+function absolute_path() {
+  return $GLOBALS['absolute_path'];
+}
+
