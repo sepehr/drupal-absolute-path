@@ -19,6 +19,7 @@ function absolute_path_init() {
   $GLOBALS['absolute_path'] = substr($absolute_dir, 0, -1 * (1 + strlen($relative_dir)));
 }
 
+
 /**
  * The Helper function.
  *
